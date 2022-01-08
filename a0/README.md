@@ -1,4 +1,3 @@
-# a0
 ## PART 1: NAVIGATION –
 1.	To start solving this program, I first looked for the reason for infinite looping of the code. I used Spyder-Anaconda3 IDE to debug the code and realised that the previously traversed moves were added again to the fringe, including the moves that were leading to dead-end or the moves the agent previously travelled from. To fix this, I introduced a variable named ‘visited’ which creates a 2D list of the size of the map and initialised all the position to False, indicating the states that are not traversed yet. Once we get a list of moves from the ‘moves’ function, we return from the ‘search1’ function if it is the goal state, else we verify if the move is available in ‘visited’ list, and then we push it to the fringe in case it is not traversed yet and add it to the visited list (line number 44-47) in the code. Implementing the visited list solved the infinite loop issue.
 2.	The next challenge was to find the correct map directions to the goal states. I tried the following approach to map the map directions. 
@@ -33,5 +32,4 @@ b.	Initial state – 2D map with only 1 ‘p’ placed.
 c.	Goal state – Finding maximum number of ‘p’ that can be placed if K = 0.
 d.	Successor function – A set of state of the map with (n+1) non-conflicting placed ‘p’ on a n number of ‘p’ placed state of the map.
 e.	Cost function – The cost of finding all the states that can place (n+1) ‘p’ in non-conflicting positions.
-
 

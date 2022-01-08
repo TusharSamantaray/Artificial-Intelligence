@@ -1,5 +1,3 @@
-# a4
-
 ## Naïve Bayes Classifier
 
 #### Approach
