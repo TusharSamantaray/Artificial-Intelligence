@@ -2,7 +2,6 @@
 
 #### Approach
 
-- To build the Naïve Bayes classifier, a similar approach was followed as solving the POS-tagger problem in the previous assignment. 
 - From the given 'tweet.train.clean.txt', a 'words_df' dataframe was constructed that contains the frequency of all the words that were found in each tweet in the training data file. Similarly, a dictionary called 'location_probability' was populated with probability of finding each location in the training data file. 
 - To predict the location of a tweet, the posterior probability was calculated as Max(P(location) * P(each word in the tweet | location)).
 
